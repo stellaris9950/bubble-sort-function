@@ -14,22 +14,21 @@ elements = [39, 12, 18, 85, 72, 10, 2, 18]
 # print(linearSearch(elements, 4564))
 
 
-def binarySearch(anArray, item):
-    lower_index = 0
-    higher_index = len(anArray)
-    check = True
-    while check:
-        middle_index = ( lower_index + higher_index ) // 2
-        if item == anArray[middle_index]:
-            return middle_index
-        elif item < anArray[middle_index]:
-            higher_index = middle_index - 1
-        elif item > anArray[middle_index]:
-            lower_index = middle_index + 1
-    return -1
-
-
-print(binarySearch(nums, 1))
+# def binarySearch(anArray, item):
+#     lower_index = 0
+#     higher_index = len(anArray) - 1
+#     while lower_index <= higher_index:
+#         middle_index = ( lower_index + higher_index ) // 2
+#         if item == anArray[middle_index]:
+#             return middle_index
+#         elif item < anArray[middle_index]:
+#             higher_index = middle_index - 1
+#         elif item > anArray[middle_index]:
+#             lower_index = middle_index + 1
+#     return -1
+#
+#
+# print(binarySearch(nums, 10))
 
 # elements = [39, 12, 18, 85, 72, 10, 2, 18]
 #
@@ -53,11 +52,27 @@ print(binarySearch(nums, 1))
 
 
 # def selectionSort(anArray):
-#
+#     for slot in range(len(anArray)):
+#         min_position = slot
+#         for i in range(min_position, len(anArray)):
+#             if anArray[i] < anArray[min_position]:
+#                 min_position = i
+#         (anArray[slot], anArray[min_position]) = (anArray[min_position], anArray[slot])
 #
 #
 # print("Unsorted list is,")
 # print(elements)
-# bubble(elements)
+# selectionSort(elements)
 # print("Sorted Array is, ")
 # print(elements)
+
+
+def insertionSort(anArray):
+
+
+
+print("Unsorted list is,")
+print(elements)
+insertionSort(elements)
+print("Sorted Array is, ")
+print(elements)
