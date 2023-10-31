@@ -68,7 +68,7 @@ elements = [39, 12, 18, 85, 72, 10, 2, 18]
 
 
 def insertionSort(anArray):
-
+    for element in range(1, len(anArray)):
 
 
 print("Unsorted list is,")
