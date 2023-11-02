@@ -5,13 +5,12 @@ words = ["dog", "at", "good", "eye", "cat", "ball", "fish"]
 elements = [39, 12, 18, 85, 72, 10, 2, 18]
 
 # def linearSearch(anArray, search_item):
-#     for item in anArray:
-#         if item == search_item:
-#
-#             return anArray.index(item)
+#     for i in range(len(anArray)):
+#         if anArray[i] == search_item:
+#             return i
 #
 #     return -1
-# print(linearSearch(elements, 4564))
+# print(linearSearch(elements, 10))
 
 
 # def binarySearch(anArray, item):
@@ -68,7 +67,14 @@ elements = [39, 12, 18, 85, 72, 10, 2, 18]
 
 
 def insertionSort(anArray):
-    for element in range(1, len(anArray)):
+    for i in range(1, len(anArray)):
+        item = anArray[i]
+        previous_position = i -1
+        while previous_position >= 0 and item < anArray[previous_position]:
+            anArray[previous_position + 1] = anArray[previous_position]
+            previous_position -= 1
+        anArray[previous_position + 1] = item
+
 
 
 print("Unsorted list is,")
